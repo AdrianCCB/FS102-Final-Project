@@ -118,34 +118,6 @@ $(".fa-heart").hover(
 );
 
 
-
-// var boxHeight=$(".bd-placeholder-img").height();
-// $(".recipe-card").hover(
-//     function(){
-//         $(this)
-//         .stop()
-//             .find(".bd-placeholder-img")
-//             .animate({
-//             opacity: 0.5,
-//             height: "toggle",
-//           }, 100)
-//           $(this)
-//              .find(".recipe-details")
-//              .removeClass("hidden-text");
-//         },
-//     function(){
-//         $(".bd-placeholder-img").animate({
-//             opacity: 1,
-//             // height: boxHeight
-//             }, 100),
-//             $(this)
-//                 .find(".recipe-details")
-//                 .addClass("hidden-text");
-//         }
-
-// )
-
-
 // ******************* Package page
 
 // hover over package selection, background will toggle color
