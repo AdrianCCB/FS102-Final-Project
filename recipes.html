@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Cook</title>
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section id="top-bar">
+        <nav class="navbar navbar-expand-md mb-4">
+            <div class="container-fluid">
+                <div>
+                    <img class="chef-hat" src="images/chef_hat.png" alt="">
+                    <a class="navbar-brand" href="index.html">Chef Cook</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="line"></span> 
+                    <span class="line"></span> 
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <div class="collapse nav-masthead navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="recipes.html">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="packages.html">Packages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-success login-request" type="submit">Login</button>
+                </div>
+            </div>
+        </nav>
+    </section>
+        
+    <!-- Login form -->
+    <section id="login" class="hide-login"> 
+        <div class="row">
+            <!-- login column -->
+            <div class="col-md-6 login-column d-flex flex-column">
+                <div>
+                    <h5>Login</h5>
+                </div>
+                <form class=" mt-auto">
+                    <i class="far fa-times-circle close-login fa-lg"></i>
+                    <div class="mb-2">
+                        <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-2">
+                        <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Login</button>
+                </form>
+            </div>
+            <!-- register column -->
+            <div class="col-md-6 register-column d-flex flex-column"> 
+                <div>
+                    <h5>Register</h5>
+                </div>
+                <div class="register-content">
+                    <span>New User? Register now to start your jouney with us</span> 
+                </div>
+                <div class="register-btn mt-auto">
+                    <button type="submit" class="btn btn-warning">Register</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Recipes Introduction -->
+    <section id="recipes-intro">
+        <div class="py-5 text-center container">
+            <h1>Recipes</h1>
+            <span class="lead text-muted">We got your back!</span> <br>
+            <span class="lead text-muted"> Here you have all the secrets to your wonderful meals!</span>
+        </div>
+    </section>
+
+
+    <!-- latest Recipes list -->
+    <section id="recipes-list">
+        <div class="container-fluid">
+            <h2 class="pb-2 border-bottom ps-4">Latest Recipes</h2>
+
+            <!-- latest recipe 1 -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 pt-3">
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/Broccoli_bites.jpg"
+                            alt="Broccoli_bites">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Slow Cooker Loaded Potato Soup</h5>
+                            <p class="card-text">A Tasty Thanksgiving</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 2 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/one-pot-chicken.jpg"
+                            alt="one-pot-chicken">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Slow Cooker Loaded Potato Soup</h5>
+                            <p class="card-text">A Tasty Thanksgiving</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 3 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/paprika-chicken.jpg"
+                            alt="paprika-chicken">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Paprika Chicken & Rice Bake</h5>
+                            <p class="card-text">Sometimes the best things come in one pot! </p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- latest recipe 4 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize"
+                            src="images/one-pot-mushroom.jpg" alt="one-pot-mushroom">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">One-Pot Chicken And Mushroom Pasta</h5>
+                            <p class="card-text">Delicious Cheesy Pasta Recipes</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 5 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize"
+                            src="images/chicken-teriyaki.jpg" alt="chicken-teriyaki">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Chicken Teriyaki Fried Rice</h5>
+                            <p class="card-text">Kid-Friendly Fried Rice that makes your kids ask for more.</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 6 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/easy-chicken.jpg"
+                            alt="easy-chicken">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Easy Chicken Piccata</h5>
+                            <p class="card-text">New Year's Dinner Party Under 45 Minutes.</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 7 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/one-pan.jpg"
+                            alt="one-pan">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">One-pan Honey Garlic Chicken</h5>
+                            <p class="card-text">Easy And Fancy Dinner Recipe to host your date at home.</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 8 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/potato-soup.jpg"
+                            alt="potato-soup">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Slow Cooker Loaded Potato Soup</h5>
+                            <p class="card-text">A Tasty Thanksgiving dinner.</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- latest recipe 9 -->
+                <div class="col align-items-stretch d-flex">
+                    <div class="card shadow-sm recipe-card">
+                        <img class="bd-placeholder-img card-img-top placeholder-resize" src="images/prime-rib.jpg"
+                            alt="prime-rib">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-text">Prime Rib With Garlic Herb Butter</h5>
+                            <p class="card-text">A Tasty Thanksgiving dinner with your lovely date.</p>
+                            <div class="mt-auto">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Thanksgiving list of food -->
+    <section id="thanksgiving-list">
+        <!-- thanksgiving receipes header -->
+        <div>
+            <h2 class="pb-2 border-bottom thanksgiving-header ps-4">Thanksgiving Recipes</h2>
+        </div>
+        <!-- food placeholder -->
+        <div class="container-fluid pt-3">
+            <div class="row">
+                <!-- thanksgiving food 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/show-stopping.jpg" alt="show-stopping">
+                        </div>
+                        <div>
+                            <h5 class="thanksgiving-list-title">Show-Stiooing Beef Wellington</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- thanksgiving food 2 -->    
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/microwave-garlic.jpg"
+                                alt="microwave-garlic">
+                        </div>
+                        <div>
+                            <h5 class="thanksgiving-list-title">Microwave Garlic Mashed Potatoes</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- thanksgiving food 3 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/loaded-breakfast.jpg"
+                                alt="loaded-breakfast">
+                        </div>
+                        <div>
+                            <h5 class="thanksgiving-list-title">Loaded Breakfast Sweet Potato</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- thanksgiving food 4 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/classic-deviled.jpg"
+                                alt="loaded-breakfast">
+                        </div>
+                        <div>
+                            <h5 class="thanksgiving-list-title">Classic Deviled Eggs</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- show more button -->
+        <div>
+            <button class="btn" type="submit">More ></button>
+        </div>
+    </section>
+
+
+    <!-- List of apple food -->
+    <section id="apple-list">
+        <!-- apple-list receipes header -->
+        <div>
+            <h2 class="pb-2 border-bottom apple-header ps-4">An Apple a Day</h2>
+        </div>
+        <!-- food placeholder -->
+        <div class="container-fluid pt-3">
+            <div class="row">
+                <!-- apple food 1 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/caramel-apple.jpg" alt="caramel-apple">
+                        </div>
+                        <div>
+                            <h5 class="apple-list-title">Caramel Apple Crumble</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- apple food 2 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/60-minute-apple.jpg"
+                                alt="60-minute-apple">
+                        </div>
+                        <div>
+                            <h5 class="apple-list-title">60-Minute Apple Pie</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- apple food 3 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/apple-crumble.jpg"
+                                alt="apple-crumble">
+                        </div>
+                        <div>
+                            <h5 class="apple-list-title">Apple Crumble Cupcakes</h5>
+                        </div>
+                    </a>
+                </div>
+                <!-- apple food 4 -->  
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div>
+                            <img class="placeholder-resize1" src="images/brown-butter-apple.jpg"
+                                alt="brown-butter-apple">
+                        </div>
+                        <div>
+                            <h5 class="apple-list-title">Brown Butter Apple Tart</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- show more button -->
+        <div>
+            <button class="btn" type="submit">More ></button>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+            <span class="text-muted">© 2021 Chef Cook, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-4 social-icon"><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a></li>
+            <li class="ms-4"><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li class="ms-4"><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <!-- Go to top button -->
+    <button id="goTopBtn" title="Go to top" >
+        <i class="fas fa-angle-up fa-lg"> <p>Top</p></i>
+    </button>
+
+    <!-- Javascript -->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e3904b02e6.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Main JS -->
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
