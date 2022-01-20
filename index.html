@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef Cook</title>
+  <!-- Favicon Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section id="top-bar">
+    <nav class="navbar navbar-expand-md mb-4">
+      <div class="container-fluid">
+        <div>
+          <img class="chef-hat" src="images/chef_hat.png" alt="">
+          <a class="navbar-brand" href="index.html">Chef Cook</a>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="line"></span> 
+          <span class="line"></span> 
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <div class="collapse nav-masthead navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="recipes.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-success login-request" type="submit">Login</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Login form -->
+  <section id="login" class="hide-login"> 
+    <div class="row">
+      <!-- login column -->
+      <div class="col-md-6 login-column d-flex flex-column">
+        <div>
+          <h5>Login</h5>
+        </div>
+        <form class=" mt-auto">
+          <i class="far fa-times-circle close-login fa-lg"></i>
+          <div class="mb-2">
+            <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-2">
+            <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-danger">Login</button>
+        </form>
+      </div>
+      <!-- register column -->
+      <div class="col-md-6 register-column d-flex flex-column"> 
+        <div>
+          <h5>Register</h5>
+        </div>
+        <div class="register-content">
+          <span>New User? Register now to start your jouney with us</span> 
+        </div>
+        <div class="register-btn mt-auto">
+          <button type="submit" class="btn btn-warning">Register</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- pop out subscription -->
+  <section id="popup">
+    <div class="container-fluid popup-container shadow-lg p-3 mb-5">
+      <div>
+        <i class="far fa-times-circle close-popup fa-lg"></i>
+        <h1>Subscribe</h1>
+        <p class="pb-1 border-bottom">Get the latest updates</p>
+      </div>
+      
+      <!-- form -->
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <!-- name input -->
+          <div class="col-lg-6 col-md-6">
+            <input type="text" class="form-control" id="firstName" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid name is required.
+            </div>
+          </div>
+          <!-- email input -->
+          <div class="col-lg-6 col-md-6 ">
+            <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+          <!-- Subscribe button -->
+          <div class="col-md-12 mt-2">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- about me -->
+  <section id="my-information">
+    <div class="container-fluid py-5">
+      <div class="row">
+        <!-- a person figure image -->
+        <div class="col-lg-4 col-md-3 profile-image-div">
+          <img class="profile-image" src="images\962px-Person_icon_BLACK-01.svg.png" alt="">
+        </div>
+        <!-- description on right -->
+        <div class="col-lg-8 col-md-9">
+          <h1 class="display-5 big-title">Adrian Chai <span class="small-title"> <em> Founder of Chef
+                Cook</em></span></h1>
+          <p class="col-md-8 fs-4">Started Chef Cook to help everyone to become a master chef. Explore the fun of cooking with our professionals. </p>
+          <!-- Buttons -->    
+          <a class="remove-hyperlink" href="packages.html">
+            <button class="btn btn-primary" type="button">Book a class <i class="fas fa-arrow-circle-right"></i></button>
+          </a>
+          <a class="remove-hyperlink" href="contact.html">
+            <button class="btn btn-primary" type="button">Contact us <i class="fas fa-arrow-circle-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Posting a youtube video -->
+  <section id="video-screen">
+    <div class="video-outer">
+      <div class="video-inner">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/gkAC0HoAVoA" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <!-- Create fade background-image -->
+    <div class="testimonials-background">
+    </div>
+    <div class="testimonials-content">
+
+      <h1>Testimonials</h1>
+      <hr class="featurette-divider">
+
+      <!-- testimonial 1 -->
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2 class="text-muted">A gem of a cooking experience</h2>
+            <p class="lead"><em>We signed up for an Indian meal class: prata, fish curry and dhal. Cook Chef has many different culinary recipes to learn so you have lots of choices, it was hard to just choose one. Highly recommended.</em></p>
+          </div>
+          <div class="col-lg-5 align-items-stretch d-flex">
+            <img src="images/happy-class.jpg" alt="happy-class">
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- testimonial 2 -->
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-7 order-lg-2 order-md-1 order-sm-1">
+            <h2 class="text-muted">A unique cooking class</h2>
+            <p class="lead"><em>I’m a cooking lover and I’ve already done many other classes before. I really recommend to spend some hours in this peaceful class, to learn more about local cuisine and about the wish of share with others</em></p>
+          </div>
+          <div class="col-lg-5 order-lg-1 order-md-2 order-sm-2 align-items-stretch d-flex">
+            <img src="images/happy-class2.jpg" alt="happy-class2">
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- testimonial 3 -->
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2 class="text-muted">Excellent authentic cooking that’s so delicious!</h2>
+            <p class="lead"> <em> Had a great experience at Chef Cook, the food was delicious and something I feel I can recreate at home. Loved the outdoor kitchen and all of the fruit growing in the garden. Great day out.</em></p>
+          </div>
+          <div class="col-lg-5 align-items-stretch d-flex">
+            <img src="images/happy-class3.png" alt="happy-class3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- features -->
+  <section id="features">
+    <div>
+      <h1 class="pb-4 border-bottom ps-4">Features</h1>
+    </div>
+
+      <!-- feature placeholder -->
+      <div class="container-fluid pt-3 ">
+        <div class="row align-items-center  ">
+
+          <!-- Food king feature -->
+          <div class="col-lg-4 col-md-4">
+            <div>
+              <img class="feature-icon-resize" src="images/food-king-removebg-preview.png" alt="food-king">
+          </div>
+          <div class="mt-auto">
+            <span>⭐⭐⭐</span>
+            <h5>Food King Good</h5>
+            </div>
+          </div>
+
+          <!-- CNA feature -->
+          <div class="col-lg-4 col-md-4">
+            <div>
+              <img class="feature-icon-resize" src="images/unnamed-removebg-preview.png" alt="cna">
+            </div>
+            <div class="mt-auto">
+              <span>⭐⭐⭐⭐⭐</span>
+              <h5>CNA 5.0 reviews </h5>
+            </div>
+          </div>
+
+          <!-- Smart local feature -->
+          <div class="col-lg-4 col-md-4 ">
+            <div>
+              <img class="feature-icon-resize" src="images/smart-local-removebg-preview.png" alt="loaded-breakfast">
+            </div>
+            <div class="mt-auto">
+              <span>⭐⭐⭐⭐⭐</span>
+             <h5>Highly Rate Activity</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- social media -->
+  <section id="social-media">
+    <div>
+      <h1 class="pb-4 border-bottom ps-4">Social Media</h1>
+    </div>
+    <div class="row">
+      <!-- counter for Twitter -->
+      <div class="col-lg-4 col-md-4 pb-2 pt-4">
+        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-3x"></i></a>
+        <div class="counter" data-target="6748">0</div>
+        <span>Twitter Followers</span>
+      </div>
+      <!-- counter for Instagram -->
+      <div class="col-lg-4 col-md-4 pb-2 pt-4">
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-3x"></i></a>
+        <div class="counter" data-target="7892">0</div>
+        <span>Instagram Followers</span>
+      </div>
+      <!-- counter for Facebook -->
+      <div class="col-lg-4 col-md-4 pt-4">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-3x"></i></a>
+        <div class="counter" data-target="12030">0</div>
+        <span>Facebook Followers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe -->
+  <section id="subscribe">
+    <div class="container-fluid">
+      <div>
+        <h1>Subscribe</h1>
+        <p class="pb-1 border-bottom">Get the latest updates</p>
+      </div>
+     
+      <!-- form -->
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <!-- name input -->
+          <div class="col-lg-6 col-md-6">
+            <input type="text" class="form-control" id="firstName" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid name is required.
+            </div>
+          </div>
+          <!-- email input -->
+          <div class="col-lg-6 col-md-6 ">
+            <input type="email" class="form-control" id="email" placeholder="abc@example.com" required>
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+          <!-- Subscribe button -->
+          <div class="col-md-12 mt-2">
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="text-muted">© 2021 Chef Cook, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-4 social-icon"><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter fa-2x"></i></a></li>
+          <li class="ms-4"><a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a></li>
+          <li class="ms-4"><a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a></li>
+        </ul>
+      </footer>
+  </section>
+
+  <!-- Go to top button -->
+  <button id="goTopBtn" title="Go to top" >
+    <i class="fas fa-angle-up fa-lg"> <p>Top</p></i>
+  </button>
+
+
+  <!-- Javascript -->
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/e3904b02e6.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Main JS -->
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
