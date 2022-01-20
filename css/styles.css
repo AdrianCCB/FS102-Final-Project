@@ -709,11 +709,3 @@ a, .nav-link {
 .show-text .plus-icon{
   display:none;
 }
-
-
-
-
-.cooking-details {
-  position: absolute;
-  z-index: 2;
-}
