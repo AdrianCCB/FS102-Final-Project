@@ -118,6 +118,7 @@ $(".fa-heart").hover(
 );
 
 
+
 // ******************* Package page
 
 // hover over package selection, background will toggle color
@@ -127,47 +128,145 @@ $(".package").hover(
     }
 );
 
-// countdown timer
 
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 26, 2022 23:59:59").getTime();
+// countdown timer
+// Set future times (current time + 20 seconds)
+var tempDate = new Date();
+var tempYear = tempDate.getFullYear();
+var tempMonth = tempDate.getMonth();
+var tempDay = tempDate.getDate();
+var tempHour = tempDate.getHours();
+var tempMin = tempDate.getMinutes();
+var tempSec = tempDate.getSeconds();
+var futureDate = new Date(tempYear, tempMonth, tempDay, tempHour, tempMin, tempSec+20);
 
 // Update the count down every 1 second
 var x = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result
-  $(".dates").text(days);
-  $(".hours").text(hours);
-  $(".mins").text(minutes);
-  $(".secs").text(seconds);
-    
-  // When count ends 
-  if (distance < 0) {
-    clearInterval(x);
+    // Get today's date and time
+    var now = new Date().getTime();
+        
+    // Find the time difference between now and the count down date
+    var timeDifference = futureDate - now;
+        
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    $(".dates").text("0");
-    $(".hours").text("0");
-    $(".mins").text("0");
-    $(".secs").text("0");
+    // Count down color for days
+    if (days < 5) {
+        $(".dates")
+            .css("color","red")
+            .text(days);
+    } else if (days < 10) {
+            $(".dates")
+            .css("color","yellow")
+            .text(days);
+        }
 
-    $(".sales-heading").addClass("hidden-text");
-    $(".orginal-price").addClass("hidden-text");
-    $(".discount-percent").addClass("hidden-text");
-    $(".discount-tag-img").addClass("hidden-text");
-    $(".expired-heading").removeClass("hidden-text");
-  }
+    // Count down color for hours
+    if (hours < 5) {
+        $(".hours")
+        .css("color","red")
+        .text(hours);
+    } else if (hours < 10) {
+        $(".hours")
+        .css("color","yellow")
+        .text(hours);
+        } else if (hours < 15) {
+            $(".hours")
+            .css("color","green")
+            .text(hours);
+            } else if (hours < 24) {
+                $(".hours")
+                .css("color","cyan")
+                .text(hours);
+                }
+
+    // Count down color for minutes   
+    if (minutes < 5) {
+        $(".mins")
+        .css("color","red")
+        .text(minutes);
+    } else if (minutes < 10) {
+        $(".mins")
+        .css("color","yellow")
+        .text(minutes);
+        } else if (minutes < 20) {
+            $(".mins")
+            .css("color","lime")
+            .text(minutes);
+            } else if (minutes < 30) {
+                $(".mins")
+                .css("color","cyan")
+                .text(minutes);
+                } else if (minutes < 40) {
+                    $(".mins")
+                    .css("color","purple")
+                    .text(minutes);
+                    } else if (minutes < 50) {
+                        $(".mins")
+                        .css("color","orange")
+                        .text(minutes);
+                        } else if (minutes < 60) {
+                            $(".mins")
+                            .css("color","violet")
+                            .text(minutes);
+                            }
+
+    // Count down color for seconds
+    if (seconds < 6) {
+        $(".secs")
+        .css("color","red")
+        .text(seconds);
+    } else if (seconds < 10) {
+        $(".secs")
+        .css("color","yellow")
+        .text(seconds);
+        } else if (seconds < 20) {
+            $(".secs")
+            .css("color","lime")
+            .text(seconds);
+            } else if (seconds < 30) {
+                $(".secs")
+                .css("color","cyan")
+                .text(seconds);
+                } else if (seconds < 40) {
+                    $(".secs")
+                    .css("color","white")
+                    .text(seconds);
+                    } else if (seconds < 50) {
+                        $(".secs")
+                        .css("color","orange")
+                        .text(seconds);
+                        } else if (seconds < 60) {
+                            $(".secs")
+                            .css("color","violet")
+                            .text(seconds);
+                            }
+
+    // When count reach less than 6 secs and count ends 
+    if (timeDifference < 6000){
+        $(".secs")
+            .fadeOut(100)
+            .fadeIn(100);
+    } 
+    if (timeDifference < 0) {
+        clearInterval(x);
+
+        $(".dates").text("0");
+        $(".hours").text("0");
+        $(".mins").text("0");
+        $(".secs").text("0");
+
+        $(".sales-heading").addClass("hidden-text");
+        $(".orginal-price").addClass("hidden-text");
+        $(".discount-percent").addClass("hidden-text");
+        $(".discount-tag-img").addClass("hidden-text");
+        $(".expired-heading").removeClass("hidden-text");
+    }
 }, 1000);
 
 
@@ -208,4 +307,5 @@ for (i=0 ; i<totalQn ; i++){
             $(this).parents(".faq-question").toggleClass("show-text")
         });            
 };
+
 
